@@ -6,6 +6,13 @@
 trigger:
 - main
 
+- task: dependency-check-build-task@6
+  inputs:
+    projectName: 'Security check'
+    scanPath: '**/*.csproj'
+    format: 'HTML, JSON'
+
+
 pool:
   vmImage: ubuntu-latest
 
